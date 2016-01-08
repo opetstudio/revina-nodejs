@@ -14,7 +14,7 @@ if (!isDev) {
 else{
 	var dbPort 		= 27017;
 	var dbHost 		= 'localhost';
-	var dbName 		= 'okehsip';
+	var dbName 		= 'revina';
 	// var dbName 		= 'solusidijam7';
 	var dbUserName = "";
 	var dbPassword = "";

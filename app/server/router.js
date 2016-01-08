@@ -1,8 +1,11 @@
 var USERSM = require('./modules/users-manager');
+var DIS = require('./modules/diskusi-manager');
+// var util = require('./modules/utils').utils;
 // var Mailgun = require('mailgun-js');
 var dbconn = require('./modules/db-connection');
 var db = dbconn.db;
 module.exports = function(app, socket) {
+	// console.log("cekkk:"+util.tes1());
 	var rememberme = function(res,id){
 		res.cookie('im', id, { maxAge: 900000 });
 	}
@@ -53,6 +56,23 @@ module.exports = function(app, socket) {
 		// if (req.get('host').match(/^www/) == null ) res.redirect('http://www.' + req.get('host') + req.url, 301);
 		// else next();
 	}); 
+	
+	app.post('/SS/androidSyncNewerDiskusiURL', function(req, res){
+		DIS.androidSyncNewerDiskusiURL(req,function(jsonResp){
+			res.json(jsonResp);
+		});
+	});
+	app.post('/SS/androidSubmitDataDiskusiMessageURL', function(req, res){
+		DIS.androidSubmitDataDiskusiMessageURL(req,function(jsonResp){
+			res.json(jsonResp);
+		});
+	});
+	app.get('/hproxy_check_location', function(req, res) {
+		res.send("oksip");
+	});
+	app.put('/google56820aea7adece87.html', function(req, res) {
+		res.send("google-site-verification: google56820aea7adece87.html");
+	});
 	app.get('/google56820aea7adece87.html', function(req, res) {
 		res.send("google-site-verification: google56820aea7adece87.html");
 	});
