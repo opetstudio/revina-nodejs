@@ -1,7 +1,7 @@
 {
-  "name": "Okehsip",
+  "name": "revina-merchiana",
   "version": "1.0.0",
-  "description": "Demo Application",
+  "description": "Server #1 untuk GMAHK app",
   "keywords": [
     "RTPoai",
     "Node.js",
@@ -11,9 +11,9 @@
   "author": {
     "name": "RTPoai",
     "email": "rtpoai@gmail.com",
-    "url": "http://www.openshift.com/"
+    "url": "opetstudio.wordpress.com"
   },
-  "homepage": "http://www.openshift.com/",
+  "homepage": "opetstudio.wordpress.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/openshift/origin-server"
